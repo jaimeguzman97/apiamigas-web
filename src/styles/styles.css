@@ -1,0 +1,103 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100&family=Marck+Script&family=Montserrat:wght@100&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tittle-nav {
+
+    font-family: 'Marck Script', cursive;
+}
+
+.button {
+    --color: #ffffff;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button::before,
+.button::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background: linear-gradient(10deg, yellow, #034077);
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    filter: brightness(0.8);
+}
+
+.social ul li{
+
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    line-height: 75px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid;
+    float: left;
+    transition: all 0.5 ease;
+}
+
+.imgBanner{
+
+    background-image: url('/assets/bee2.jpg');
+}
+
+.imgText{
+
+    background-image: url('/public/assets/letrero.jpg');
+}
